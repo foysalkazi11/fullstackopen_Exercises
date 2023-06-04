@@ -42,7 +42,10 @@ const App = () => {
       })
       .catch((err) => {
         console.log(err);
-        showNotification("Person added failed", "error");
+        showNotification(
+          err?.response?.data?.error || "Person added failed",
+          "error"
+        );
       });
   };
 
@@ -60,7 +63,10 @@ const App = () => {
       })
       .catch((err) => {
         console.log(err);
-        showNotification("Person updated failed", "error");
+        showNotification(
+          err?.response?.data?.error || "Person updated failed",
+          "error"
+        );
       });
   };
 
@@ -76,7 +82,10 @@ const App = () => {
         })
         .catch((err) => {
           console.log(err);
-          showNotification("Person delete failed", "error");
+          showNotification(
+            err?.response?.data?.error || "Person delete failed",
+            "error"
+          );
         });
     }
   };

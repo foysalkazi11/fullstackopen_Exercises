@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "https://fullstackopen-part3-exercise.onrender.com/api/persons";
+const baseUrl = "/api/persons";
 
 // get all person
 const getAllPersons = () => {
